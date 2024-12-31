@@ -21,11 +21,11 @@ public class Dictionary_Chapter21 {
 		englishMap.put("cherry","さくらんぼ");
 	}
 		
-		public String findMeaning(String word) {
-			if(englishMap.containsKey(word)) {
+		
+		public String englishkey(String word) {
 				return englishMap.get(word);
-			} else {
-				return word + "は辞書には存在しません";
+			} 
+		public boolean existenceWord(String word) {
+				return englishMap.containsKey(word);
 			}
-	}
 }

@@ -15,8 +15,11 @@ public class DictionaryExec_Chapter21 {
 			englishList.add("orange");
 			
 			for(String word : englishList) {
-				String meaning = englishMap.findMeaning(word);
-				System.out.println(word + "の意味は" + meaning);
+				if(englishMap.existenceWord(word)) {
+					System.out.println(word + "の意味は" + englishMap.englishkey(word));
+				}else {
+					System.out.println(word + "は辞書には存在しません");
+				}
 			}
 	}
 }
